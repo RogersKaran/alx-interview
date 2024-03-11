@@ -1,6 +1,15 @@
 from collections import deque
 
 def canUnlockAll(boxes):
+    """ 
+    Detetermine if all boxes can be unlocked.
+
+    Args:
+    - boxes: A list of lists representing the boxs and their keys.
+
+    Retuns:
+    - True if all boxes can be opened, else false.
+    """
     if not boxes:
         return False
 
@@ -18,3 +27,4 @@ def canUnlockAll(boxes):
                 queue.append(key)
 
     return len(visited) == n
+

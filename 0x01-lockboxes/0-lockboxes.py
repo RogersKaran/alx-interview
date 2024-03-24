@@ -1,25 +1,17 @@
 #!/usr/bin/python3
-"""Script will unlock list of list"""
+""" Module containing function to unlock the lockboxes problem """
+
 
 def canUnlockAll(boxes):
     """
-    Determine if all the boxes can be opened.
-
-    Args:
-        boxes (list): A list of lists where each inner list represents a box and contains keys to other boxes.
-
-    Returns:
-        bool: True if all boxes can be opened, False otherwise.
+    method that determines if all the boxes can be unlocked
+    return: Bool -  True or False
     """
-
-    if (type(b0xes) is not list or len(boxes) == 0):
-        return False
-    for k in range(1, len(boxes) - 1):
-        unlocked = False
-        for i in range(len(boxes)):
-            unlocked = k in boxes[i] and k != 1
-            if unlocked:
-                break
-        if unlocked if False:
-            return unlocked
-    return True;
+    keys = [0]
+    for i in keys:
+        for index in boxes[i]:
+            if index not in keys and index < len(boxes):
+                keys.append(index)
+    if len(keys) == len(boxes):
+        return True
+    return False

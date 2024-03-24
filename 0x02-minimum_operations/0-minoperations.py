@@ -7,7 +7,10 @@ exactly n H characters in a text file using only "Copy All" and "Paste" operatio
 
 def minOperations(n):
     """
-        args: n: Number of characterfs to be displayed
+        function: 
+            Calculates the fewest number of operations needed to give a result of exactly
+            n H characters in a file
+        args: n: Number of characters to be displayed
         return: number of min operations
     """
 
